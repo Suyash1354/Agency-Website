@@ -1,0 +1,1190 @@
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-dragging {
+  cursor: grabbing;
+}
+
+[data-scroll-container] {
+  will-change: transform;
+}
+
+[data-scroll] {
+  transition: transform 0.3s ease-out;
+}
+
+@font-face {
+  font-family: Clash;
+  src: url(./fonts/ClashDisplay-Variable.ttf);
+}
+@font-face {
+  font-family: one;
+  src: url(./fonts/1.woff2);
+}
+@font-face {
+  font-family: two;
+  src: url(./fonts/2.woff2);
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  color: white;
+}
+
+/* From Uiverse.io by qhns3 */
+/* From Uiverse.io by AspenBranch */
+main {
+  width: 100%;
+  padding: 1.5rem;
+  /* Add your background pattern here */
+  background-color: rgb(63, 63, 63);
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6235294118) 75%, transparent 25%), linear-gradient(-45deg, #000000 25%, transparent 75%), linear-gradient(45deg, transparent 75%, #000000 75%), linear-gradient(-45deg, transparent 75%, #000000 75%);
+  background-size: 5px 5px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+main .view1 {
+  width: 100%;
+}
+main .view1 .navbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  /* From Uiverse.io by Nawsome */
+}
+main .view1 .navbar .local h4 {
+  font-family: "clash";
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+main .view1 .navbar .local span {
+  display: none;
+}
+main .view1 .navbar .container1 {
+  width: 5%;
+  height: 5%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0);
+  background-color: red;
+}
+main .view1 .navbar .clear {
+  clear: both;
+}
+main .view1 .navbar .checkBox {
+  display: block;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 2px #fff;
+}
+main .view1 .navbar .checkBox div {
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  top: -52px;
+  left: -52px;
+  position: absolute;
+  transform: rotateZ(45deg);
+  z-index: 100;
+  transition: 300ms ease; /* Ensure the transition is applied */
+}
+main .view1 .navbar .checkBox:hover div {
+  left: -10px;
+  top: -10px;
+}
+main .view1 .navbar .checkBox input[type=checkbox] {
+  position: absolute;
+  left: 50px;
+  visibility: hidden;
+}
+main .view1 .navbar .btn {
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+  font-family: "clash";
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+main .view1 .navbar .btn span {
+  display: none;
+  font-family: "clash";
+}
+main .view2 {
+  margin-top: 4rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view2 h1 {
+  font-family: Clash;
+  font-weight: 600;
+  font-size: 29vw;
+  width: 100%;
+  margin-top: 2rem;
+}
+main .view2 .about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: -2rem;
+  margin-bottom: 4rem;
+}
+main .view2 .about .location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .view2 .about .front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .view2 .about .back {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .view2 .about p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-family: Clash;
+}
+main .view2 .about span {
+  color: rgba(255, 255, 255, 0.6);
+}
+main .view2 .about .image1 {
+  filter: brightness(0) saturate(100%) invert(59%) sepia(100%) saturate(2892%) hue-rotate(88deg) brightness(108%) contrast(102%);
+}
+main .view2 .about .image1 img {
+  width: 1.2rem;
+}
+main .view2 .about .image2 {
+  filter: brightness(0) saturate(100%) invert(24%) sepia(100%) saturate(6782%) hue-rotate(353deg) brightness(107%) contrast(108%);
+}
+main .view2 .about .image2 img {
+  width: 1.2rem;
+}
+main .view2 .about .image3 {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(100%) saturate(7453%) hue-rotate(244deg) brightness(103%) contrast(112%);
+}
+main .view2 .about .image3 img {
+  width: 1.2rem;
+}
+main .view2 img {
+  border-radius: 4%;
+  width: 100%;
+}
+main .view3 {
+  width: 100%;
+  margin-top: 2rem;
+}
+main .view3 .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .view3 .container .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Clash;
+  font-size: 0.9rem;
+}
+main .view3 .container .top p:first-of-type {
+  display: none; /* This will hide the "01" text */
+}
+main .view3 .container .top p:nth-of-type(3) {
+  opacity: 0.7;
+}
+main .view3 .container .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view3 .container .bottom .heading {
+  font-family: two;
+  word-spacing: -0.2rem;
+  font-size: 2rem;
+  width: 100%;
+}
+main .view3 .container .bottom .heading span {
+  color: red;
+  font-weight: 100;
+}
+main .view3 .container .bottom .steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view3 .container .bottom .steps h1 {
+  font-size: 1.2rem;
+  font-family: two;
+}
+main .view3 .container .bottom .steps p {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: Clash;
+}
+main .view3 .container .bottom .stepsone {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view3 .container .bottom .stepsone h1 {
+  font-size: 1.2rem;
+  font-family: two;
+}
+main .view3 .container .bottom .stepsone p {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: Clash;
+}
+main .view3 .container .bottom .stepstwo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view3 .container .bottom .stepstwo h1 {
+  font-size: 1.2rem;
+  font-family: two;
+}
+main .view3 .container .bottom .stepstwo p {
+  opacity: 0.8;
+  font-size: 1rem;
+  font-weight: 200;
+  font-family: Clash;
+}
+main .view4 {
+  width: 100%;
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .view4 .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Clash;
+  font-size: 0.9rem;
+}
+main .view4 .top p:first-of-type {
+  display: none; /* This will hide the "01" text */
+}
+main .view4 .top p:nth-of-type(3) {
+  opacity: 0.7;
+}
+main .view4 .heading {
+  width: 100%;
+}
+main .view4 .heading h1 {
+  font-family: two;
+  word-spacing: -0.2rem;
+  font-size: 4rem;
+  width: 100%;
+}
+main .view4 .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view4 .bottom .columnone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view4 .bottom .columnone .image1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view4 .bottom .columnone .image1 img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main .view4 .bottom .columnone .image1 .imagecontent h4 {
+  font-weight: 100;
+  font-family: "two";
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 50%;
+}
+main .view4 .bottom .columnone .image1 .imagecontent span {
+  opacity: 0.5;
+  font-weight: 100;
+}
+main .view4 .bottom .columnone .image1 .imagecontent p:first-of-type {
+  display: none;
+}
+main .view4 .bottom .columnone .image2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view4 .bottom .columnone .image2 img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main .view4 .bottom .columnone .image2 .imagecontent1 h4 {
+  font-weight: 100;
+  font-family: "two";
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 40%;
+}
+main .view4 .bottom .columnone .image2 .imagecontent1 span {
+  opacity: 0.5;
+  font-weight: 100;
+}
+main .view4 .bottom .columnone .image2 .imagecontent1 p:first-of-type {
+  display: none;
+}
+main .view4 .bottom .columntwo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view4 .bottom .columntwo .imgage3 img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/0.6;
+  border-radius: 1rem;
+}
+main .view4 .bottom .columntwo .imagecontent3 h4 {
+  font-weight: 100;
+  font-family: "two";
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 40%;
+}
+main .view4 .bottom .columntwo .imagecontent3 span {
+  opacity: 0.5;
+  font-weight: 100;
+}
+main .view4 .bottom .columntwo .imagecontent3 p:first-of-type {
+  display: none;
+}
+main .view4 .bottom .columnthree {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view4 .bottom .columnthree .image4 img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main .view4 .bottom .columnthree .image4 .imagecontent4 h4 {
+  font-weight: 100;
+  font-family: "two";
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 50%;
+}
+main .view4 .bottom .columnthree .image4 .imagecontent4 span {
+  opacity: 0.5;
+  font-weight: 100;
+}
+main .view4 .bottom .columnthree .image4 .imagecontent4 p:first-of-type {
+  display: none;
+}
+main .view4 .bottom .columnthree .image5 img {
+  width: 100%;
+  border-radius: 1rem;
+}
+main .view4 .bottom .columnthree .image5 .imagecontent5 h4 {
+  font-weight: 100;
+  font-family: "two";
+  line-height: 1.2rem;
+  font-size: 1rem;
+  width: 50%;
+}
+main .view4 .bottom .columnthree .image5 .imagecontent5 span {
+  opacity: 0.5;
+  font-weight: 100;
+}
+main .view4 .bottom .columnthree .image5 .imagecontent5 p:first-of-type {
+  display: none;
+}
+main .view5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .view5 .top {
+  width: 100%;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: Clash;
+  font-size: 0.9rem;
+}
+main .view5 .top p:first-of-type {
+  display: none; /* This will hide the "01" text */
+}
+main .view5 .top p:nth-of-type(3) {
+  opacity: 0.7;
+}
+main .view5 .heading {
+  text-align: center;
+}
+main .view5 .heading h1 {
+  font-family: two;
+  word-spacing: -0.2rem;
+  font-size: 3rem;
+  width: 100%;
+}
+main .view5 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view5 .bottom .aboutimage {
+  padding: 1rem;
+}
+main .view5 .bottom .aboutimage img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 2rem;
+}
+main .view5 .bottom .Text-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+}
+main .view5 .bottom .Text-Container h1 {
+  font-family: "two";
+  font-size: 1.8rem;
+  width: 80%;
+}
+main .view5 .bottom .Text-Container p {
+  font-family: Clash;
+  font-weight: 200;
+  word-spacing: 0.2rem;
+}
+main .view5 .bottom .Text-Container .btn {
+  border: 2px solid rgb(0, 0, 0);
+  color: #000000;
+  background-color: white;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 2rem;
+  padding: 0.5rem 0.8rem;
+  font-family: "clash";
+  font-weight: 600;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+main .view6 {
+  width: 100%;
+  margin-top: 6rem;
+}
+main .view6 .container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main .view6 .container .top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-family: Clash;
+  font-size: 0.9rem;
+}
+main .view6 .container .top p:first-of-type {
+  display: none; /* This will hide the "01" text */
+}
+main .view6 .container .top p:nth-of-type(3) {
+  opacity: 0.7;
+}
+main .view6 .container .bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main .view6 .container .bottom .heading {
+  font-family: two;
+  word-spacing: -0.2rem;
+  font-size: 2rem;
+  width: 100%;
+}
+main .view6 .container .bottom .heading span {
+  color: red;
+  font-weight: 100;
+}
+main .view6 .container .bottom .col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view6 .container .bottom .col .col1 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .view6 .container .bottom .col .col1 h1 {
+  font-family: "Clash";
+  font-weight: 500;
+}
+main .view6 .container .bottom .col .col1 p {
+  font-family: "Clash";
+  font-weight: 100;
+}
+main .view6 .container .bottom .col .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .view6 .container .bottom .col .col2 h1 {
+  font-family: "Clash";
+  font-weight: 500;
+}
+main .view6 .container .bottom .col .col2 p {
+  font-family: "Clash";
+  font-weight: 100;
+}
+main .view6 .container .bottom .col .col3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+main .view6 .container .bottom .col .col3 h1 {
+  font-family: "Clash";
+  font-weight: 500;
+}
+main .view6 .container .bottom .col .col3 p {
+  font-family: "Clash";
+  font-weight: 100;
+}
+
+@media (min-width: 800px) {
+  main {
+    width: 100%;
+    height: 760%;
+    padding: 1.1rem;
+  }
+  main .view1 {
+    width: 100%;
+    padding: 0 14rem;
+  }
+  main .view1 .navbar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  main .view1 .navbar .local h4 {
+    font-size: 1.2rem;
+    display: flex;
+  }
+  main .view1 .navbar .local span {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+  }
+  main .view1 .navbar .btn {
+    display: flex;
+    gap: 0.5rem;
+    border: 2px solid white;
+    border-radius: 2rem;
+    padding: 0.8rem 1.5rem;
+    font-family: "clash";
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  main .view1 .navbar .btn span {
+    display: block;
+    font-family: "clash";
+  }
+  main .view2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+  main .view2 .image-container {
+    width: 80%; /* Set the container width */
+    aspect-ratio: 4/2;
+    overflow: hidden; /* Prevent the image from moving outside */
+    position: relative;
+    border-radius: 1rem;
+  }
+  main .view2 .image-container img {
+    width: 100%;
+    height: 120%; /* Slightly larger than the container to allow movement */
+    -o-object-fit: cover;
+       object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease-out;
+  }
+  main .view2 h1 {
+    font-size: 25rem;
+  }
+  main .view2 .about {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 20rem;
+  }
+  main .view3 {
+    width: 100%;
+    padding: 6rem 12rem;
+  }
+  main .view3 .container {
+    width: 100%;
+  }
+  main .view3 .container .top {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  main .view3 .container .top p:first-of-type {
+    display: block; /* This will hide the "01" text */
+  }
+  main .view3 .container .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .view3 .container .bottom h1 {
+    font-size: 6rem;
+    line-height: 0.8;
+  }
+  main .view3 .container .bottom .steps {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; /* Centers horizontally */
+    gap: 12rem;
+    margin: 6rem 28rem; /* Centers the entire block */
+    /* Adjust the margin to reduce the gap */
+    margin-bottom: 1rem;
+  }
+  main .view3 .container .bottom .steps .dots {
+    display: flex;
+  }
+  main .view3 .container .bottom .steps .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    animation: blink 1.4s infinite both;
+  }
+  main .view3 .container .bottom .steps .dot:nth-child(2) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .steps .dot:nth-child(3) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .steps .textwrap {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .view3 .container .bottom .steps .textwrap h1 {
+    font-size: 2rem;
+  }
+  main .view3 .container .bottom .steps .textwrap p {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 50%;
+  }
+  main .view3 .container .bottom .stepsone {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; /* Centers horizontally */
+    gap: 12rem;
+    margin: 6rem 28rem; /* Centers the entire block */
+    margin-top: 1rem; /* Adjust the margin to reduce the gap */
+    margin-bottom: 1rem;
+  }
+  main .view3 .container .bottom .stepsone .dots {
+    display: flex;
+  }
+  main .view3 .container .bottom .stepsone .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    animation: blink 1.4s infinite both;
+  }
+  main .view3 .container .bottom .stepsone .dot:nth-child(2) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .stepsone .dot:nth-child(3) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .stepsone .textwrapone {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .view3 .container .bottom .stepsone .textwrapone h1 {
+    font-size: 2rem;
+    font-family: "two";
+  }
+  main .view3 .container .bottom .stepsone .textwrapone p {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 50%;
+    font-family: "Clash";
+    opacity: 0.8v;
+  }
+  main .view3 .container .bottom .stepsone .dot:nth-child(2) {
+    background-color: #ffffff;
+  }
+  main .view3 .container .bottom .stepsone .dot:nth-child(3) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .stepstwo {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end; /* Centers horizontally */
+    gap: 12rem;
+    margin: 6rem 28rem; /* Centers the entire block */
+    margin-top: 1rem; /* Adjust the margin to reduce the gap */
+    margin-bottom: 1rem;
+  }
+  main .view3 .container .bottom .stepstwo .dots {
+    display: flex;
+  }
+  main .view3 .container .bottom .stepstwo .dot {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background-color: white;
+    animation: blink 1.4s infinite both;
+  }
+  main .view3 .container .bottom .stepstwo .dot:nth-child(2) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .stepstwo .dot:nth-child(3) {
+    background-color: #333;
+  }
+  main .view3 .container .bottom .stepstwo .textwraptwo {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  main .view3 .container .bottom .stepstwo .textwraptwo h1 {
+    font-size: 2rem;
+    font-family: "two";
+  }
+  main .view3 .container .bottom .stepstwo .textwraptwo p {
+    font-size: 1rem;
+    font-weight: 400;
+    width: 50%;
+    font-family: "Clash";
+    opacity: 0.8v;
+  }
+  main .view3 .container .bottom .stepstwo .dot:nth-child(2) {
+    background-color: #ffffff;
+  }
+  main .view3 .container .bottom .stepstwo .dot:nth-child(3) {
+    background-color: #ffffff;
+  }
+  main .view4 {
+    width: 100%;
+    padding: 0 12rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  main .view4 .top {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  main .view4 .top p:first-of-type {
+    display: block; /* This will hide the "01" text */
+  }
+  main .view4 .heading h1 {
+    font-family: "two";
+    font-size: 10rem;
+    line-height: 0.8;
+  }
+  main .view4 .bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+    width: 100%;
+  }
+  main .view4 .bottom .columnone {
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+  main .view4 .bottom .columnone .image1,
+  main .view4 .bottom .columnone .image2,
+  main .view4 .bottom .columnone .imgage3 {
+    position: relative;
+    overflow: hidden; /* Ensures the image scales inside the container */
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column; /* Makes the content stack below */
+  }
+  main .view4 .bottom .columnone .image1 img,
+  main .view4 .bottom .columnone .image2 img,
+  main .view4 .bottom .columnone .imgage3 img {
+    width: 40rem; /* Keeping your original size */
+    border-radius: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.3s ease-out;
+    display: block;
+  }
+  main .view4 .bottom .columnone .image1 .imagecontent,
+  main .view4 .bottom .columnone .image2 .imagecontent,
+  main .view4 .bottom .columnone .imgage3 .imagecontent {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 6rem;
+    position: relative; /* Removes absolute positioning */
+    margin-top: 10px; /* Adds space between the image and text */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  main .view4 .bottom .columnone .image1 .imagecontent h4,
+  main .view4 .bottom .columnone .image2 .imagecontent h4,
+  main .view4 .bottom .columnone .imgage3 .imagecontent h4 {
+    font-weight: 100;
+    font-family: "two";
+    line-height: 1.2rem;
+    font-size: 1rem;
+  }
+  main .view4 .bottom .columnone .image1 .imagecontent p,
+  main .view4 .bottom .columnone .image2 .imagecontent p,
+  main .view4 .bottom .columnone .imgage3 .imagecontent p {
+    font-weight: 100;
+    font-family: "two";
+  }
+  main .view4 .bottom .columnone .image1 .imagecontent p:first-of-type,
+  main .view4 .bottom .columnone .image2 .imagecontent p:first-of-type,
+  main .view4 .bottom .columnone .imgage3 .imagecontent p:first-of-type {
+    display: block;
+  }
+  main .view4 .bottom .columnone .image1 .imagecontent span,
+  main .view4 .bottom .columnone .image2 .imagecontent span,
+  main .view4 .bottom .columnone .imgage3 .imagecontent span {
+    font-family: "Clash";
+    opacity: 0.7;
+    font-weight: 100;
+  }
+  main .view4 .bottom .columnone .image1 .arrow,
+  main .view4 .bottom .columnone .image2 .arrow,
+  main .view4 .bottom .columnone .imgage3 .arrow {
+    /* From Uiverse.io by Nawsome */
+  }
+  main .view4 .bottom .columnone .image2 img {
+    width: 30rem;
+    aspect-ratio: 1.8/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  main .view4 .bottom .columnone .image2 .imagecontent1 {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 6rem;
+    position: relative; /* Removes absolute positioning */
+    margin-top: 10px; /* Adds space between the image and text */
+    width: 100%;
+    color: white;
+  }
+  main .view4 .bottom .columnone .image2 .imagecontent1 p:first-of-type {
+    display: block;
+  }
+  main .view4 .bottom .columnone .image2 .imagecontent1 h4 {
+    font-weight: 100;
+    font-family: "two";
+    line-height: 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  main .view4 .bottom .columnone .image2 .imagecontent1 p {
+    font-weight: 100;
+    font-family: "two";
+  }
+  main .view4 .bottom .columnone .image2 .imagecontent1 span {
+    font-family: "Clash";
+    opacity: 0.7;
+    font-weight: 100;
+  }
+  main .view4 .bottom .columntwo {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  main .view4 .bottom .columntwo .imgage3 {
+    display: flex;
+    justify-content: center;
+  }
+  main .view4 .bottom .columntwo .imgage3 img {
+    transition: transform 0.3s ease-out;
+    width: 50%;
+    aspect-ratio: 2/1;
+  }
+  main .view4 .bottom .columntwo .imagecontent3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 6rem;
+  }
+  main .view4 .bottom .columntwo .imagecontent3 p:first-of-type {
+    display: block;
+  }
+  main .view4 .bottom .columnthree {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: end;
+  }
+  main .view4 .bottom .columnthree .image4,
+  main .view4 .bottom .columnthree .image5 {
+    position: relative;
+    overflow: hidden; /* Ensures the image scales inside the container */
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column; /* Makes the content stack below */
+  }
+  main .view4 .bottom .columnthree .image4 img,
+  main .view4 .bottom .columnthree .image5 img {
+    width: 40rem; /* Keeping your original size */
+    border-radius: 0.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    transition: transform 0.3s ease-out;
+    display: block;
+  }
+  main .view4 .bottom .columnthree .image4 .imagecontent4,
+  main .view4 .bottom .columnthree .image5 .imagecontent4 {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 6rem;
+    position: relative; /* Removes absolute positioning */
+    margin-top: 10px; /* Adds space between the image and text */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+  }
+  main .view4 .bottom .columnthree .image4 .imagecontent4 h4,
+  main .view4 .bottom .columnthree .image5 .imagecontent4 h4 {
+    font-weight: 100;
+    font-family: "two";
+    line-height: 1.2rem;
+    font-size: 1rem;
+  }
+  main .view4 .bottom .columnthree .image4 .imagecontent4 p,
+  main .view4 .bottom .columnthree .image5 .imagecontent4 p {
+    font-weight: 100;
+    font-family: "two";
+  }
+  main .view4 .bottom .columnthree .image4 .imagecontent4 p:first-of-type,
+  main .view4 .bottom .columnthree .image5 .imagecontent4 p:first-of-type {
+    display: block;
+  }
+  main .view4 .bottom .columnthree .image4 .imagecontent4 span,
+  main .view4 .bottom .columnthree .image5 .imagecontent4 span {
+    font-family: "Clash";
+    opacity: 0.7;
+    font-weight: 100;
+  }
+  main .view4 .bottom .columnthree .image4 .arrow,
+  main .view4 .bottom .columnthree .image5 .arrow {
+    /* From Uiverse.io by Nawsome */
+  }
+  main .view4 .bottom .columnthree .image5 img {
+    width: 30rem;
+    aspect-ratio: 1.8/1;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  main .view4 .bottom .columnthree .image5 .imagecontent5 {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 6rem;
+    position: relative; /* Removes absolute positioning */
+    margin-top: 10px; /* Adds space between the image and text */
+    width: 100%;
+    color: white;
+  }
+  main .view4 .bottom .columnthree .image5 .imagecontent5 p:first-of-type {
+    display: block;
+  }
+  main .view4 .bottom .columnthree .image5 .imagecontent5 h4 {
+    font-weight: 100;
+    font-family: "two";
+    line-height: 1.2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+  main .view4 .bottom .columnthree .image5 .imagecontent5 p {
+    font-weight: 100;
+    font-family: "two";
+  }
+  main .view4 .bottom .columnthree .image5 .imagecontent5 span {
+    font-family: "Clash";
+    opacity: 0.7;
+    font-weight: 100;
+  }
+  main .view5 {
+    width: 100%;
+  }
+  main .view5 .top {
+    padding: 2rem 12rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  main .view5 .top p:first-of-type {
+    display: block; /* This will hide the "01" text */
+  }
+  main .view5 .heading {
+    position: sticky;
+  }
+  main .view5 .heading h1 {
+    font-size: 6rem;
+  }
+  main .view5 .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6rem;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+  }
+  main .view5 .bottom .aboutimage {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center image container horizontally */
+  }
+  main .view5 .bottom .aboutimage img {
+    width: 30%;
+    aspect-ratio: 1/1.5;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 1rem;
+  }
+  main .view5 .bottom .Text-Container {
+    width: 100%;
+    text-align: center; /* Center text container content */
+  }
+  main .view5 .bottom .Text-Container h1 {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+  main .view5 .bottom .Text-Container p {
+    margin-bottom: 1rem;
+    max-width: 800px; /* Set maximum width for paragraph text */
+    font-size: 1rem;
+  }
+  main .view5 .bottom .Text-Container .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    font-size: 1rem;
+  }
+  main .view6 {
+    width: 100%;
+    padding: 6rem 12rem;
+  }
+  main .view6 .container {
+    width: 100%;
+  }
+  main .view6 .container .top {
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  main .view6 .container .top p:first-of-type {
+    display: block; /* This will hide the "01" text */
+  }
+  main .view6 .container .bottom {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  main .view6 .container .bottom .heading {
+    width: 100%;
+  }
+  main .view6 .container .bottom .heading h1 {
+    font-size: 8rem;
+    line-height: 0.8;
+    margin-top: 2rem;
+  }
+  main .view6 .container .bottom .col {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 2rem;
+    margin-left: 40rem;
+    margin-top: 4rem;
+  }
+  main .view6 .container .bottom .col .col1, main .view6 .container .bottom .col .col2, main .view6 .container .bottom .col .col3 {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 8rem; /* Add gap between elements */
+  }
+  main .view6 .container .bottom .col .col1 .one p, main .view6 .container .bottom .col .col1 .two p, main .view6 .container .bottom .col .col1 .three p, main .view6 .container .bottom .col .col2 .one p, main .view6 .container .bottom .col .col2 .two p, main .view6 .container .bottom .col .col2 .three p, main .view6 .container .bottom .col .col3 .one p, main .view6 .container .bottom .col .col3 .two p, main .view6 .container .bottom .col .col3 .three p {
+    font-size: 1rem;
+  }
+  main .view6 .container .bottom .col .col1 .textcontent1 h1, main .view6 .container .bottom .col .col1 .textcontent2 h1, main .view6 .container .bottom .col .col1 .textcontent3 h1, main .view6 .container .bottom .col .col2 .textcontent1 h1, main .view6 .container .bottom .col .col2 .textcontent2 h1, main .view6 .container .bottom .col .col2 .textcontent3 h1, main .view6 .container .bottom .col .col3 .textcontent1 h1, main .view6 .container .bottom .col .col3 .textcontent2 h1, main .view6 .container .bottom .col .col3 .textcontent3 h1 {
+    font-size: 2rem;
+  }
+  main .view6 .container .bottom .col .col1 .textcontent1 p, main .view6 .container .bottom .col .col1 .textcontent2 p, main .view6 .container .bottom .col .col1 .textcontent3 p, main .view6 .container .bottom .col .col2 .textcontent1 p, main .view6 .container .bottom .col .col2 .textcontent2 p, main .view6 .container .bottom .col .col2 .textcontent3 p, main .view6 .container .bottom .col .col3 .textcontent1 p, main .view6 .container .bottom .col .col3 .textcontent2 p, main .view6 .container .bottom .col .col3 .textcontent3 p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=style.css.map */

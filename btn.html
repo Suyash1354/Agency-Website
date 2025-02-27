@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Page</title>
+</head>
+
+<style>
+    body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.form-section {
+    max-width: 500px;
+}
+
+h1, h2 {
+    margin: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin: 10px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+}
+
+button {
+    padding: 10px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>RING A BELL!</h1>
+            <p>Reach out and let's create something amazing together. Let's achieve greatness.</p>
+            <h2>FILL THIS FORM OUT</h2>
+            <form>
+                <input type="text" placeholder="Name*" required>
+                <input type="email" placeholder="Email*" required>
+                <textarea placeholder="Message*" required></textarea>
+                <button type="submit">Submit Now</button>
+            </form>
+        </div>
+        <div class="image-section">
+            <img src="path/to/image.jpg" alt="Contact Image">
+        </div>
+    </div>
+</body>
+</html>
