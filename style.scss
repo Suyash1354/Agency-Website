@@ -782,21 +782,24 @@ main {
         }
 
         .btn {
-          display: flex;
-          gap: 0.5rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 
-          border: 2px solid white;
-          border-radius: 2rem;
-          padding: 0.8rem 1.5rem;
-          font-family: "clash";
-          font-weight: 600;
-          font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 0.8rem 1.5rem;
+  font-family: "clash";
+  font-weight: 600;
+  font-size: 1rem;
+  white-space: nowrap; /* prevents text wrap */
+}
 
-          span {
-            display: block;
-            font-family: "clash";
-          }
-        }
+.btn span {
+  display: inline; /* was block — now inline to stay in the same line */
+  font-family: "clash";
+}
+
       }
     }
 

@@ -16,17 +16,23 @@
   <main data-scroll-container>
     <section class="view1">
       <div class="navbar">
-        <div class="local">
-          <h4><span>LOCAL/</span>11:47:23</h4>
-        </div>
-        <div class="content">
-          <label class="checkBox">
-            <input id="ch1" type="checkbox" />
-            <div class="transition"></div>
-          </label>
-        </div>
-        <div class="btn">CONTACT <span>NOW</span></div>
-      </div>
+  <div class="local">
+    <h4><span>LOCAL/</span><span id="time">11:47:23</span></h4>
+  </div>
+  <div class="content">
+    <label class="checkBox">
+      <input id="ch1" type="checkbox" />
+      <div class="transition"></div>
+    </label>
+  </div>
+  <div class="btn">
+  <a href="https://www.instagram.com/synx_dev?utm_source=ig_web_button_share_sheet&igsh=Mnlmazd5OWNjYm9z" target="_blank" style="text-decoration: none; color: inherit;">
+    CONTACT <span>NOW</span>
+  </a>
+</div>
+
+</div>
+
     </section>
 
     <section class="view2">
@@ -309,6 +315,23 @@
 
   <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll/dist/locomotive-scroll.min.js"></script>
   <script>
+
+    function updateIndianTime() {
+    const options = {
+      timeZone: 'Asia/Kolkata',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    };
+
+    const now = new Date();
+    const time = new Intl.DateTimeFormat('en-IN', options).format(now);
+    document.getElementById('time').textContent = time;
+  }
+
+  updateIndianTime(); // Initial call
+  setInterval(updateIndianTime, 1000); // Update every second
 
 
 

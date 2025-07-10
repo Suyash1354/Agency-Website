@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html.has-scroll-smooth {
   overflow: hidden;
 }
@@ -619,7 +620,8 @@ main .view6 .container .bottom .col .col3 p {
     color: rgba(255, 255, 255, 0.6);
   }
   main .view1 .navbar .btn {
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     gap: 0.5rem;
     border: 2px solid white;
     border-radius: 2rem;
@@ -627,9 +629,10 @@ main .view6 .container .bottom .col .col3 p {
     font-family: "clash";
     font-weight: 600;
     font-size: 1rem;
+    white-space: nowrap; /* prevents text wrap */
   }
   main .view1 .navbar .btn span {
-    display: block;
+    display: inline; /* was block — now inline to stay in the same line */
     font-family: "clash";
   }
   main .view2 {
