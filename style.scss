@@ -756,8 +756,9 @@ main {
 @media (min-width: 800px) {
   main {
     width: 100%;
-    height: 760%;
+    height: 710%;
     padding: 1.1rem;
+    
 
     .view1 {
       width: 100%;
@@ -988,6 +989,7 @@ main {
         flex-direction: column;
         gap: 8rem;
         width: 100%;
+        cursor: pointer;
 
         .columnone {
           width: 90%;
@@ -1058,6 +1060,7 @@ main {
               aspect-ratio: 1.8/1;
               object-fit: cover;
               border-radius: 0.5rem;
+              
             }
             .imagecontent1 {
               font-size: 0.8rem;
@@ -1237,6 +1240,7 @@ main {
 
     .view5 {
       width: 100%;
+  
       
 
       .top {
